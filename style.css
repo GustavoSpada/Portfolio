@@ -7,28 +7,84 @@
 :root{
   /*variaveis*/
   --text-color: white;
-  --bg-url: url();
+  --bg-url: url(./Images/example\ BG\ Root.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --switch-bg-url: url();
+  --switch-bg-url: url(./Images/moon-stars.svg);
 }
 
 .light {
   /*variaveis light*/
   --text-color: black;
-  --bg-url: url(./assets/assets/bg-desktop-light.jpg);
+  --bg-url: url(./Images/example\ BG\ Light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(./assets/assets/sun.svg);
+  --switch-bg-url: url(./Images/sun.svg);
 }
 
 body{
+  /*mudança variavel no ajuste da imagem*/
   background-image: var(--bg-url);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+}
+
+body *{
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+}
+
+#Caixa{
+  /*caixa com Switch e Profile dentro*/
+  width: 100%;
+  max-width: 588px;
+  margin: auto;
+  margin-top: 56px;
+  padding: 0 24px;
+}
+
+/*Perfil*/
+#Perfil{
+  /*alteraçao no nome do perfil*/
+  text-align: center;
+  padding: 24px;
+}
+
+#Perfil img {
+  width: 112px;
+}
+
+#Perfil p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/*Switch*/
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button{
+  width: 32px;
+  height: 32px;
+  background: white;
+  background-image: var(--switch-bg-url);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+  animation: slide-back 0.2s;
 }
