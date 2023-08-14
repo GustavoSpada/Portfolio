@@ -40,7 +40,7 @@ body *{
 }
 
 #Caixa{
-  /*caixa com Switch e Profile dentro*/
+  /*caixa com Switch e Perfil dentro*/
   width: 100%;
   max-width: 588px;
   margin: auto;
@@ -50,13 +50,13 @@ body *{
 
 /*Perfil*/
 #Perfil{
-  /*alteraçao no nome do perfil*/
   text-align: center;
   padding: 24px;
 }
 
 #Perfil img {
   width: 112px;
+  border-radius: 9999px;
 }
 
 #Perfil p {
@@ -108,6 +108,7 @@ body *{
   border-radius: 9999px;
 }
 
+/*links*/
 ul {
   list-style: none;
   display: flex;
@@ -135,14 +136,14 @@ ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
-/* social links*/
-#social-links {
+/*social links*/
+#Social-Links {
   display: flex;
   justify-content: center;
   padding: 24px 0;
   font-size: 24px
 }
-#social-links a {
+#Social-Links a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,11 +151,28 @@ ul li a:hover {
   border-radius: 50%;
   transition: background 0.2s;
 }
-#social-links a:hover{ /*mudanca ao passar o mouse por cima*/
+#Social-Links a:hover{ /*mudanca ao passar o mouse por cima*/
   background: var(--highlight-color);
 }
 footer {
     padding: 24px 0;
     text-align: center;
     font-size: 14px;
+}
+
+@keyframes slide-in{
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-back{
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
